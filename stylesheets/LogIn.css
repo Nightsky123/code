@@ -1,6 +1,7 @@
    *{
         margin:0px;
         padding: 0px;
+        -webkit-user-select: none;
     }
     body{
         font-family: sans-serif;
