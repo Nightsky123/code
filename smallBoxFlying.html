@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+<style type="text/css">
+ #fly{
+ 	width: 1px;
+ 	height: 1px;
+ 	background-color: red;
+    border-left-width:50px;
+    border-right-width:0px; 
+    border-top-width:0px;
+    border-bottom-width:0px; 
+
+
+
+
+ 	position: absolute;
+ }  
+ #box{
+ 	position: relative;
+ }  
+</style>
+</head>
+<body>
+   <span>请在网页空白处点击</span>
+   <div id="box">
+      <div id="fly"></div>
+   </div>
+      <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+      <script type="text/javascript">
+      var theBox = document.getElementById("fly");
+      var mouseX = 0;
+      var mouseY = 0;
+      var ss = 0;
+
+       $(document).click(function(event) {
+           var event = event || window.event;
+       	  mouseX = event.clientX;
+       	  mouseY = event.clientY;
+       	  var x = theBox.offsetLeft;
+          var y = theBox.offsetTop;
+       	 
+       	  if(ss===1){
+       	  	
+       	  	clearInterval();
+       	  }
+       	 setInterval(function(){
+       	  	getLocation(mouseX,mouseY);  
+       	  },10);
+
+       	  function getLocation(q,w){
+          
+          if(x!==mouseX||y!==mouseY){
+          if(x<mouseX){
+          	x+=0.5;
+          	theBox.style.left = x+"px";
+          	if(y<mouseY){
+          		y+=0.5;
+          		theBox.style.top =y+"px";
+          	}else{
+          		y-=0.5;
+          		theBox.style.top =y+"px";
+          	}
+          }else{
+          	x-=0.5;
+          	theBox.style.left = x+"px";
+          	if(y<mouseY){
+          		y+=0.5;
+          		theBox.style.top =y+"px";
+          	}else{
+          		y-=0.5;
+          		theBox.style.top =y+"px";
+          	}
+          }
+      }else if(x===mouseX&&y===mouseY){
+      	 ss = 1;
+      }
+      
+  }
+      	});
+      </script>
+</body>
+</html>
