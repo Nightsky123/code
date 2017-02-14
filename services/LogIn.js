@@ -1,7 +1,7 @@
-window.onload=function(){
     var user = document.getElementById("userName");
     var pass = document.getElementById("passWord");
     var log = document.getElementById("POST");
+window.onload=function(){
     logIn();
     log.addEventListener("click",function(){
         if(user.value !=="xiaosi"&&pass.value !=="1234"){
