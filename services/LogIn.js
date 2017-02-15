@@ -5,7 +5,7 @@ window.onload=function(){
     logIn();
     log.addEventListener("click",function(){
         if(user.value !=="xiaosi"&&pass.value !=="1234"){
-             location.href = "view/home.html";
+             window.location.href = "view/home.html";
              refresh();
             }else{
             $("#layer").modal("show");
