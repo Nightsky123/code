@@ -1,6 +1,7 @@
     var user = document.getElementById("userName");
     var pass = document.getElementById("passWord");
     var log = document.getElementById("POST");
+    $("body").addClass("logInStyle");
 window.onload=function(){
     logIn();
     log.addEventListener("click",function(){
