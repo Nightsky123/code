@@ -1,0 +1,22 @@
+<div class='all' id="haveScroll">
+                    <div id='navs'>
+                        <div class='nav' type="button" ></div>
+                        <div class='nav' type="button" ></div>
+                        <div class='nav' type="button" ></div>
+                        <div class='nav' type="button" ></div>
+                    </div>
+      <div class="allThePaper" id="first">
+            <div class="up" id="q">
+                    <div class="me">
+                        <div class="firstPic">
+                            <img class='smallPic'/>
+                        </div>
+                        <div class='tips'></div>
+                        <div class="homeMessage"></div>
+                    </div>
+            </div>
+            <div class='middle' id="w"></div>
+            <div class='third' id="e"></div>
+            <div class='down' id="r"></div>
+      </div>
+  </div>
