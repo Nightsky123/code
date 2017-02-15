@@ -3,7 +3,7 @@
         padding: 0px;
         -webkit-user-select: none;
     }
-    body{
+    .logInStyle{
         font-family: sans-serif;
         background-color: #323B55;
         background-image: -webkit-linear-gradient(bottom, #323B55 0%, #424F71 100%);
