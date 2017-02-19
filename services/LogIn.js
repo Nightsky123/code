@@ -4,6 +4,7 @@
     $("body").addClass("logInStyle");
 window.onload=function(){
     logIn();
+    $("body").addClass("logInStyle");
     log.addEventListener("click",function(){
         if(user.value !=="xiaosi"&&pass.value !=="1234"){
              window.location.href = "view/home.html";
