@@ -64,17 +64,19 @@
         height: 800px;
         float: left;
         margin-left: 38%;
-        margin-top: 200px;
+        margin-top: 150px;
         color: white;
         z-index: 1000;
         position: absolute;
     }
     .homeMessage{
-        width: 500px;
-        height: 600px;
+        padding-top: 35px;
+        width: 450px;
+        height: 500px;
         margin:30px;
-        text-indent: 2em;
+        text-align: center;
         line-height: 30px;
+        font-size: 16px;
 
     }
     .firstPic{
