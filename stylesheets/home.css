@@ -35,7 +35,7 @@
         color:white;
         position: absolute;
         margin:2% 65%;
-        width: 500px;
+        width: 1000px;
         position: absolute;
         z-index: 1200;
         position: fixed;
@@ -53,8 +53,8 @@
         cursor: pointer;
     }
     .smallPic{
-        width: 150px;
-        height: 180px;
+        width: 200px;
+        height: 260px;
         border-radius: 50%;
         margin:0 auto;
         
@@ -64,7 +64,7 @@
         height: 800px;
         float: left;
         margin-left: 38%;
-        margin-top: 10%; 
+        margin-top: 200px;
         color: white;
         z-index: 1000;
         position: absolute;
@@ -78,10 +78,11 @@
 
     }
     .firstPic{
-        width: 150px;
+        width: 200px;
         margin: 0 auto;
     }
     .tips{
         margin-top: 20px;
         text-align: center;
+        font-size: 25px;
     }
