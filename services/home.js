@@ -7,7 +7,7 @@
         Nav[2].innerHTML = "CONTACT";
         Nav[3].innerHTML = "RESUME";
         var Tips = document.getElementsByClassName('tips')[0];
-        homePicture.src = "../images/home.jpg";
+        homePicture.src = "home.jpg";
         Tips.innerHTML = 'Yes, it is me';
         var Q = document.getElementById('q');
         // Q.style.backgroundImage= 'url(http://dl.bizhi.sogou.com/images/2012/04/19/218120.jpg)';
