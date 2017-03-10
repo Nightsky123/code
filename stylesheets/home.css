@@ -125,3 +125,73 @@
         text-align: center;
         font-size: 25px;
     }
+
+
+#middleBody{
+    text-align: center;
+    width:800px;
+    margin-left: 100px;
+    height: 900px;
+    padding:150px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+}
+#middleFirst{
+    margin-top: 100px;
+}
+.question{
+    list-style: none;
+    border-radius: 5px;
+    border:1px solid #888888;
+    /*css3效果*/
+    width: 150px;
+    height: 50px;
+    -webkit-transition: width 3s;
+    -moz-transition:width 3s;
+    -o-transition:width 3s;
+    -webkit-transition:width 3s;
+}
+.question:hover{
+    width: 550px;
+}
+
+.navboxlist {
+    position: relative;
+    float: left;
+}
+
+ul.navlist {
+    list-style: none;
+    display: block;
+    width: 200px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    padding: 60px 0 60px 0;
+    background: url(../images/shad2.png) no-repeat;
+    -webkit-background-size: 50% 100%;
+}
+
+li {
+    margin: 5px 0 0 0;
+}
+
+ul.navlist li a {
+    -webkit-transition: all 0.3s ease-out;
+    background: #cbcbcb url(../images/border.png) no-repeat;
+    color: #174867;
+    padding: 7px 15px 7px 15px;
+    -webkit-border-top-right-radius: 10px;
+    -webkit-border-bottom-right-radius: 10px;
+    width: 200px;
+    display: block;
+    text-decoration: none;
+    -webkit-box-shadow: 2px 2px 4px #888;
+}
+
+ul.navlist li a:hover {
+    background: #ebebeb url(images/border.png) no-repeat;
+    color: #67a5cd;
+    padding: 7px 15px 7px 30px;
+}
