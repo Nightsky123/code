@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登录页</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link rel="stylesheet" href="allframes/bootstrap.min.css">
+<link href="allframes/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="stylesheets/LogIn.css">
+<link rel="stylesheet" type="text/css" href="allframes/bootstrap.min.css">
+<script src="allframes/jquery-1.7.2.js"></script>
+<script src="allframes/bootstrap.js"></script>
+<script src="allframes/vue.js"></script>
+</head>
+<body>
+    <div id="logBox">
+        <div class="logSmallBox">
+            <div class="logContent">
+                     <div class="logTable">
+                        <div class="user" class="controls">
+                            <!-- <div id='first' class="fa fa-user fa-2x"></div> -->
+                            <input id='userName' type="text" placeholder="用户名"/>
+                        </div>
+                        <div class="password">
+                           <!-- <div id='second' class="fa fa-lock fa-2x"></div> -->
+                           <input id="passWord" type="text" placeholder="密码"/>
+                        </div>
+                    </div>
+                    <div class='logButton'>
+                        <button id="POST" type='button' class="btn btn-primary">登录</button>
+                    </div>
+            </div>
+           
+        </div>
+         <!--模态框 弹出框-->
+        <div  role="dialog" class="modal fade bs-example-modal-sm" id="layer">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">您所输入的账号不存在，请重新输入。</h4>
+                    </div>
+                    <div class="modal-body text-right">
+                        <button data-dismiss="modal" class="btn btn-danger btn-sm" v-on:click="refresh()">确认</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="services/LogIn.js"></script>
+ </body>
+</html>

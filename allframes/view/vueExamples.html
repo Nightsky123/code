@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Examples</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<link href="../stylesheets/vueExamples.css" rel="stylesheet">
+</head>
+<body>
+    <div id="main">
+    <nav @click.prevent>
+        <a v-for="item in items" :class="{'show': item.active}" @click="makeActive(item, $index)">{{item.name}}</a>
+    </nav>
+    <p>You chose <b>{{active}}</b></p>
+</div>
+<script src="../allframes/vue.js"></script>
+<script type="text/javascript" src="../services/vueExamples.js"></script>
+</body>
+</html>
