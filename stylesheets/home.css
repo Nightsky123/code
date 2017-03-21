@@ -104,7 +104,7 @@
         
     } */
     .me{
-        width: 500px;
+        width: 100%;
         height: 800px;
         float: left;
         margin-left: 34%;
@@ -128,6 +128,7 @@
         margin: 0 auto;
     }
     .tips{
+        width:450px;
         margin-top: 20px;
         text-align: center;
         font-size: 25px;
