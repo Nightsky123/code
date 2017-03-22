@@ -42,10 +42,10 @@
 
 #navs {
     float: left;
+    width:100%;
     color: white;
     position: absolute;
-    margin: 2% 50%;
-    width: 800px;
+    margin-top: 2%;
     z-index: 1200;
     height:40px;
     position: fixed;
@@ -53,6 +53,7 @@
 .buttonBox{
     width:480px;
     float:right;
+    margin-right: 150px;
 }
 .nav {
     float: left;
