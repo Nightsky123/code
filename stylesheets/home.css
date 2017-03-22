@@ -20,10 +20,9 @@
     float: left;
 }
 
-#canvasContent {
-    width: 100%;
-    height: 1300px;
-}
+/*#canvasContent {*/
+    /*width: 100%;*/
+/*}*/
 
 .homeUp {
     position: relative;
@@ -31,17 +30,13 @@
 
 .homeUp, .homeThird {
     width: 100%;
-    height: 1344px;
-
     background-color: rgb(51, 51, 51);
     font-size: 13px;
-    width: 100%;
     margin: 0px;
 }
 
 .homeMiddle, .homeDown {
     width: 100%;
-    height: 1344px;
     background-color: rgb(240, 240, 240);
 }
 
@@ -49,13 +44,16 @@
     float: left;
     color: white;
     position: absolute;
-    margin: 2% 65%;
+    margin: 2% 40%;
     width: 1000px;
-    position: absolute;
     z-index: 1200;
+    height:40px;
     position: fixed;
 }
-
+.buttonBox{
+    width:480px;
+    float:right;
+}
 .nav {
     float: left;
     width: 100px;
@@ -117,7 +115,7 @@
     } */
 .me {
     width: 600px;
-    height: 800px;
+    height: 250px;
     float: left;
     margin-left: 34%;
     margin-top: 150px;
@@ -125,15 +123,19 @@
     z-index: 1000;
     position: absolute;
 }
+#myCanvas{
+    width:650px;
+    height:500px;
+}
 .spaceBoxFirst{
-    width: 35%;
-    height: 800px;
+    width: 30%;
+    height: 900px;
     margin-top: 150px;
     float: left;
 }
 .spaceBoxSecond{
-    width: 35%;
-    height: 800px;
+    width: 30%;
+    height: 900px;
     margin-top: 150px;
     float: right;
 }
@@ -141,7 +143,7 @@
 .homeMessage {
     padding-top: 15px;
     width: 80%;
-    height: 500px;
+    height: 100px;
     margin: 30px;
     text-align: center;
     line-height: 30px;
