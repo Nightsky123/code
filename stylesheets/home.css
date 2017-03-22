@@ -116,7 +116,7 @@
         
     } */
 .me {
-    width: 30%;
+    width: 600px;
     height: 800px;
     float: left;
     margin-left: 34%;
@@ -124,6 +124,18 @@
     color: white;
     z-index: 1000;
     position: absolute;
+}
+.spaceBoxFirst{
+    width: 35%;
+    height: 800px;
+    margin-top: 150px;
+    float: left;
+}
+.spaceBoxSecond{
+    width: 35%;
+    height: 800px;
+    margin-top: 150px;
+    float: right;
 }
 
 .homeMessage {
