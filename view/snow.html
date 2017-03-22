@@ -2,40 +2,44 @@
 <html>
 <head>
     <meta charset="utf-8">
-	<title></title>
-	<style type="text/css">
-    *{
-    	padding: 0px;
-    	margin: 0px;
-    }
-    body{
-    	background: black;
-    	
-    }
-    #box{
-    	float: left;
-    	width:1990px;
-    	height: 900px;
-    	border:1px solid red;
-    	position: relative;
-    	overflow: hidden;
-    }
-    #box div{
-    	position: absolute;
-    }
-    #btn{
-    	width: 150px;
-    	height: 60px;
-    	background: red;
-    	color: white;
-    	text-align: center;
-    	line-height: 60px;
-    }
-	</style>
+    <title></title>
+    <style type="text/css">
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        body {
+            background: black;
+
+        }
+
+        #box {
+            float: left;
+            width: 1990px;
+            height: 900px;
+            border: 1px solid red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #box div {
+            position: absolute;
+        }
+
+        #btn {
+            width: 150px;
+            height: 60px;
+            background: red;
+            color: white;
+            text-align: center;
+            line-height: 60px;
+        }
+    </style>
 </head>
 <body>
-    <div id="btn" onclick="star()">点我就下雪</div>
-    <div id="box"></div>
+<div id="btn" onclick="star()">点我就下雪</div>
+<div id="box"></div>
 <script type="text/javascript" src="../services/snow.js"></script>
 </body>
 </html>

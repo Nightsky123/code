@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Examples</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+<canvas id="draw" width="1185px" height="1000px">
+</canvas>
+<div id="button1"></div>
+<div id="button2"></div>
+<script type="text/javascript">
+    var drawing = document.getElementById("draw");
+    var context = drawing.getContext("2d");
+    context.strokeStyle = "blue";
+
+    context.beginPath();
+    context.moveTo(150, 150);
+    context.lineTo(960, 50);
+    context.lineTo(300, 250);
+    context.closePath();
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(300, 250);
+    context.lineTo(310, 380);
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(960, 50);
+    context.lineTo(490, 380);
+    context.lineTo(320, 270);
+    context.closePath();
+    context.stroke();
+
+    context.beginPath();
+    context.moveTo(320, 270);
+    context.lineTo(310, 380);
+    context.lineTo(410, 330);
+    context.stroke();
+
+    context.beginPath();
+    context.strokeStyle = "#A9A9A9";
+    context.moveTo(250, 520);
+    context.lineTo(420, 410);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(220, 500);
+    context.lineTo(300, 450);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(170, 250);
+    context.lineTo(50, 280);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(120, 305);
+    context.lineTo(50, 330);
+    context.stroke();
+</script>
+</body>
+</html>

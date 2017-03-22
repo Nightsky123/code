@@ -14,40 +14,40 @@
 
     @keyframes resturant {
         from {
-            border: "1px solid red"
+            background: red;
         }
         to {
-            border: "1px solid yellow"
+            background: yellow;
         }
     }
 
     @-moz-keyframes resturant /* Firefox */
     {
         from {
-            border: "1px solid red"
+            background: red;
         }
         to {
-            border: "1px solid yellow"
+            background: yellow;
         }
     }
 
     @-webkit-keyframes resturant /* Safari 和 Chrome */
     {
         from {
-            border: "1px solid red"
+            background: red;
         }
         to {
-            border: "1px solid yellow"
+            background: yellow;
         }
     }
 
     @-o-keyframes resturant /* Opera */
     {
         from {
-            border: "1px solid red"
+            background: red;
         }
         to {
-            border: "1px solid yellow"
+            background: yellow;
         }
     }
 
@@ -66,7 +66,7 @@
     </div>
 
 </div>
-<script src="../allframes/vue.js"></script>
+<script src="allframes/vue.js"></script>
 <script type="text/javascript">
     var data = {
         resturant: [
@@ -117,37 +117,37 @@
             }],
         youResturantStyle: {
             float: "left",
-            width: "305px",
-            height: "80px",
-            fontSize: "45px",
+            width: "250px",
+            height: "30px",
+            fontSize: "18px",
             fontFamily: "黑体",
             marginTop: "20px",
-//                             marginLeft:"60px",
+            marginLeft: "60px",
             background: "#42b983",
             border: "1px solid black",
             textAlign: "center",
-            lineHeight: "80px"
+            lineHeight: "30px"
         },
         MenuStyle: {
             marginTop: "10px",
-            width: "290px",
+            width: "250px",
             height: "50px",
             float: "left"
         },
         addOrDelete: {
             float: "right",
-            width: "40px",
-            height: "40px",
-            fontSize: "30px",
+            width: "20px",
+            height: "20px",
+            fontSize: "18px",
             border: "1px solid black",
             textAlign: "center",
-            lineHeight: "30px"
+            lineHeight: "20px"
         },
         allEatStyle: {
             float: "right",
             marginRight: "100px",
-//                         marginTop:"200px",
-            float: "left",
+            marginTop: "200px",
+            float: "right",
             width: "400px",
             height: "500px"
         },
@@ -164,10 +164,9 @@
         submitStyle: {
             marginLeft: "60px",
             marginTop: "40px",
-            width: "120px",
-            height: "50px",
+            width: "100px",
+            height: "40px",
             background: "red",
-            fontSize: "30px",
             float: "left"
         },
         dex: false,
@@ -192,7 +191,7 @@
                 }
             },
             select: function (index) {
-
+                debugger;
                 index.num++;
 
             },
