@@ -66,7 +66,7 @@ Nav[1].addEventListener('click', function () {
     var time = null;
     function scrollPosition() {
         if (height !== theScreenHeight) {
-            height += 30;
+            height = theScreenHeight;
         }
         window.scrollTo(0, height);
         if (height === theScreenHeight) {
@@ -84,7 +84,7 @@ Nav[2].addEventListener('click', function () {
     var time = null;
     function scrollPositionTwo() {
         if (pageLocation !== heightTwo) {
-            pageLocation += 30;
+            pageLocation = heightTwo;
         }
         window.scrollTo(initialPosition,pageLocation);
         if (pageLocation === heightTwo) {
@@ -99,7 +99,7 @@ Nav[3].addEventListener('click', function () {
     var time = null;
     function scrollPositionThree() {
         if (heightTwo !== 3*theScreenHeight) {
-            heightTwo += 30;
+            heightTwo = 3*theScreenHeight
         }
         window.scrollTo(initialPosition, heightTwo);
         if (heightTwo === 3*theScreenHeight) {
