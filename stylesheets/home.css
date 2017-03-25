@@ -212,7 +212,7 @@ li {
 
 ul.navlist li a {
     -webkit-transition: all 0.3s ease-out;
-    background: #cbcbcb url(../border.png) no-repeat;
+    background: #cbcbcb url(../images/border.png) no-repeat;
     color: #174867;
     padding: 7px 15px 7px 15px;
     -webkit-border-top-right-radius: 10px;
@@ -224,7 +224,7 @@ ul.navlist li a {
 }
 
 ul.navlist li a:hover {
-    background: #ebebeb url(../border.png) no-repeat;
+    background: #ebebeb url(../images/border.png) no-repeat;
     color: #67a5cd;
     padding: 7px 15px 7px 30px;
 }
