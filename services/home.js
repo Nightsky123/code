@@ -87,7 +87,7 @@ function theNavsText() {
 
         function scrollPosition() {
             if (height !== theScreenHeight) {
-                height += (theScreenHeight / 10);
+                height =theScreenHeight;
             }
             window.scrollTo(0, height);
             if (height === theScreenHeight) {
@@ -107,7 +107,7 @@ function theNavsText() {
 
         function scrollPositionTwo() {
             if (pageLocation !== heightTwo) {
-                pageLocation += (heightTwo / 10);
+                pageLocation = heightTwo ;
             }
             window.scrollTo(initialPosition, pageLocation);
             if (pageLocation === heightTwo) {
@@ -125,10 +125,10 @@ function theNavsText() {
 
         function scrollPositionThree() {
             if (heightTwoSec !== allTop) {
-                heightTwoSec += (allTop / 10);
+                heightTwoSec = allTop ;
             }
             window.scrollTo(initialPosition, heightTwoSec);
-            if (heightTwoSec > allTop) {
+            if (heightTwoSec = allTop) {
                 clearInterval(time);
             }
         }
