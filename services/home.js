@@ -8,6 +8,30 @@ Tips.innerHTML = 'Yes, it is me';
 $("#theFatherBox").css("width", theScreenWidth);
 $("#navs").css("width", theScreenWidth);
 
+//图片预加载
+var images = new Array;
+var imageArr = new Array;
+imageLoad();
+function imageLoad() {
+    imageArr[0] = " ../images/always.jpg";
+    imageArr[1] = " ../images/clock.jpg";
+    imageArr[2] = "../images/cloud.jpg";
+    imageArr[3] = "../images/flower.png";
+    imageArr[4] = "../images/ticket.jpg";
+    imageArr[5] = "../images/sound.jpg";
+    imageArr[6] = "../images/youku.jpg";
+    imageArr[7] = "../images/google.jpg";
+    imageArr[8] = "../images/post.jpg";
+    imageArr[9] = "../images/news.jpg";
+    imageArr[10] = "../images/light.jpg";
+    preload(imageArr);
+}
+function preload(imageArr) {
+    for (i = 0; i < imageArr.length; i++) {
+        images[i] = new Image();
+        images[i].src = imageArr[i];
+    }
+}
 
 changeHeightWidth();
 //适配不同尺寸屏幕
@@ -25,7 +49,6 @@ function changeHeightWidth() {
     canvasSize.style.width = theScreenHeight / 2 + "px";
     canvasSize.style.height = theScreenHeight / 3 + "px";
 }
-
 drawThePlane();
 // canvas画线
 function drawThePlane() {
@@ -68,7 +91,6 @@ function drawThePlane() {
     cxt.lineTo(400.5, 1160.5);
     cxt.stroke();
 }
-
 //导航栏文本及事件
 theNavsText();
 function theNavsText() {
@@ -87,7 +109,7 @@ function theNavsText() {
 
         function scrollPosition() {
             if (height !== theScreenHeight) {
-                height =theScreenHeight;
+                height = theScreenHeight;
             }
             window.scrollTo(0, height);
             if (height === theScreenHeight) {
@@ -107,7 +129,7 @@ function theNavsText() {
 
         function scrollPositionTwo() {
             if (pageLocation !== heightTwo) {
-                pageLocation = heightTwo ;
+                pageLocation = heightTwo;
             }
             window.scrollTo(initialPosition, pageLocation);
             if (pageLocation === heightTwo) {
@@ -125,7 +147,7 @@ function theNavsText() {
 
         function scrollPositionThree() {
             if (heightTwoSec !== allTop) {
-                heightTwoSec = allTop ;
+                heightTwoSec = allTop;
             }
             window.scrollTo(initialPosition, heightTwoSec);
             if (heightTwoSec = allTop) {
@@ -137,7 +159,8 @@ function theNavsText() {
     });
 }
 threeContact();
-function threeContact(){
+//三种方式的事件
+function threeContact() {
     var threeContactFather = $(".contactWayFather");
     $(".contactWay").hide();
     threeContactFather[0].addEventListener("mouseover", function () {
