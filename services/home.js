@@ -3,7 +3,7 @@ var theScreenWidth = window.screen.width;
 //需要动态获取屏幕的宽高并控制canvas的大小
 
 var Tips = document.getElementsByClassName('tips')[0];
-Tips.innerHTML = 'Yes, it is me';
+Tips.innerHTML = '做一个固执的手艺人，精心雕琢代码';
 
 $("#theFatherBox").css("width", theScreenWidth);
 $("#navs").css("width", theScreenWidth);
@@ -78,7 +78,7 @@ function drawThePlane() {
     cxt.lineTo(350.5, 1300.5);
     cxt.lineTo(434.5, 1175.5);
     cxt.stroke();
-//
+
     cxt.beginPath();
     cxt.moveTo(350.5, 1300.5);
     cxt.lineTo(400.5, 1160.5);  //飞机尾
@@ -90,6 +90,19 @@ function drawThePlane() {
     cxt.lineTo(750.5, 1300.5);
     cxt.lineTo(400.5, 1160.5);
     cxt.stroke();
+
+    cxt.beginPath();
+    cxt.globalAlpha=0.4;
+    cxt.lineWidth = 3;//线条的宽度
+    cxt.moveTo(500, 1254.5);
+    cxt.lineTo(300.5, 1600.5);
+    cxt.stroke();
+    cxt.beginPath();
+    cxt.globalAlpha=0.3;
+    cxt.moveTo(200, 1190.5);
+    cxt.lineTo(100.5, 1300.5);
+    cxt.stroke();
+
 }
 //导航栏文本及事件
 theNavsText();
