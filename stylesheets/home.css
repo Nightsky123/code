@@ -1,28 +1,23 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: Arial;
+    margin: 0;
+    padding: 0;
 }
-
+body{
+    overflow-x: hidden;
+}
 .home {
     margin-top: 0px;
-    /*width: 100%;*/
-    height: 800px;
-}
 
+}
 .allThePaper {
-    /*width: 100%;*/
     margin: 0 auto;
-    height: 800px;
 }
-
 #canvas {
     float: left;
 }
 #homeUp {
     position: relative;
 }
-
 #homeUp{
     background-color: rgb(51, 51, 51);
     font-size: 13px;
@@ -33,27 +28,23 @@
     font-size: 13px;
     margin: 0px;
 }
-
 #homeMiddle, #homeDown {
     margin:0;
     padding:0;
     background-color: rgb(240, 240, 240);
 }
-
 #navs {
     float: left;
-    width:100%;
     color: white;
-    position: absolute;
     margin-top: 2%;
     z-index: 1200;
     height:40px;
     position: fixed;
 }
 .buttonBox{
-    width:480px;
+    width:450px;
     float:right;
-    margin-right: 100px;
+    margin-right: 80px;
 }
 .nav {
     float: left;
@@ -87,13 +78,11 @@
     color: rgb(51, 51, 51);
     background: red;
 }
-
 .nav:focus {
     -moz-box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.75);
     -webkit-box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.75);
     box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.75);
 }
-
 .nav:hover {
     text-decoration: underline;
     font-size: 21px;
@@ -101,12 +90,10 @@
     -webkit-box-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
     box-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
 }
-
 .nav:active {
     border-width: 2px 1px 1px 2px;
     font-size: 20px;
 }
-
 .me {
     width: 600px;
     height: 250px;
@@ -121,19 +108,42 @@
     width:650px;
     height:400px;
 }
+#myCanvas{
+    animation: overturn 3s infinite;
+    -webkit-animation: overturn 3s infinite;
+    -o-animation: overturn 3s infinite;
+    -moz-animation: overturn 3s infinite;
+    /*规定动画的最后状态为结束状态*/
+    animation-direction:alternate;
+    -webkit-animation-direction:alternate; /* Safari 和 Chrome */
+    -o-animation-direction:alternate;
+    -moz-animation-direction:alternate;
+    /*规定动画是否在下一周期逆向地播放。*/
+}
+@keyframes overturn{
+    0%{
+        transform: scale(0.5);
+        /*缩放*/
+        transform: skew(-10deg);
+        /*倾斜*/
+    }
+    100%{
+        transform: scale(0.8);
+        transform: skew(-15deg);
+    }
+}
 .spaceBoxFirst{
-    width: 30%;
+    width: 25%;
     height: 900px;
     margin-top: 150px;
     float: left;
 }
 .spaceBoxSecond{
-    width: 30%;
+    width: 25%;
     height: 900px;
     margin-top: 150px;
     float: right;
 }
-
 .homeMessage {
     padding-top: 15px;
     width: 80%;
@@ -142,21 +152,77 @@
     text-align: center;
     line-height: 30px;
     font-size: 16px;
-
 }
-
 .firstPic {
     width: 200px;
     margin: 0 auto;
 }
-
 .tips {
-    width: 80%;
+    width: 85%;
     margin-top: 20px;
     text-align: center;
     font-size: 25px;
 }
-
+.tips{
+    animation: lefteaseinAnimate 1s ease 1;
+    /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
+    -webkit-animation: lefteaseinAnimate 1s ease 1;
+    -o-animation: lefteaseinAnimate 1s ease 1;
+    -moz-animation: lefteaseinAnimate 1s ease 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+@keyframes lefteaseinAnimate{
+    0%{ transform: translateX(-2000px); opacity: 0;}
+    /*在0%时设置文字在想X轴-2000px位移处（左边），透明度为0，也就是看不见文字*/
+    100%{ transform: translateX(0px); opacity: 1;}
+    /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
+}
+@-webkit-keyframes lefteaseinAnimate{
+    0%{ -webkit-transform: translateX(-2000px); opacity: 0;}
+    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+}
+@-o-keyframes lefteaseinAnimate{
+    0%{ -webkit-transform: translateX(-2000px); opacity: 0;}
+    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+}
+@-moz-keyframes lefteaseinAnimate{
+    0%{ -webkit-transform: translateX(-2000px); opacity: 0;}
+    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+}
+.homeMessage{
+    animation: righteaseinAnimate 1s ease 1;
+    /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
+    -webkit-animation: righteaseinAnimate 1s ease 1;
+    -o-animation: righteaseinAnimate 1s ease 1;
+    -moz-animation: righteaseinAnimate 1s ease 1;
+    /*规定动画的最后状态为结束状态*/
+    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+}
+@keyframes lefteaseinAnimate{
+    0%{ transform: translateX(-2000px); opacity: 0;}
+    /*在0%时设置文字在想X轴-2000px位移处（左边），透明度为0，也就是看不见文字*/
+    100%{ transform: translateX(0px); opacity: 1;}
+    /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
+}
+@-webkit-keyframes righteaseinAnimate{
+    0%{ -webkit-transform: translateX(2000px); opacity: 0;}
+    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+}
+@-o-keyframes righteaseinAnimate{
+    0%{ -webkit-transform: translateX(2000px); opacity: 0;}
+    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+}
+@-moz-keyframes righteaseinAnimate{
+    0%{ -webkit-transform: translateX(2000px); opacity: 0;}
+    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+}
 #middleBody {
     text-align: center;
     margin-left: 30px;
@@ -164,13 +230,10 @@
     padding: 150px;
     background-repeat: no-repeat;
     background-size: 100%;
-
 }
-
 #middleFirst {
     margin-top: 100px;
 }
-
 .question {
     list-style: none;
     border-radius: 5px;
@@ -183,16 +246,13 @@
     -o-transition: width 3s;
     -webkit-transition: width 3s;
 }
-
 .question:hover {
     width: 550px;
 }
-
 .navboxlist {
     position: relative;
     float: left;
 }
-
 ul.navlist {
     list-style: none;
     display: block;
@@ -204,11 +264,9 @@ ul.navlist {
     background: url(../images/shad2.png) no-repeat;
     -webkit-background-size: 50% 100%;
 }
-
 li {
     margin: 5px 0 0 0;
 }
-
 ul.navlist li a {
     -webkit-transition: all 0.3s ease-out;
     background: #cbcbcb url(../images/border.png) no-repeat;
@@ -221,17 +279,13 @@ ul.navlist li a {
     text-decoration: none;
     -webkit-box-shadow: 2px 2px 4px #888;
 }
-
 ul.navlist li a:hover {
     background: #ebebeb url(../images/border.png) no-repeat;
     color: #67a5cd;
     padding: 7px 15px 7px 30px;
 }
-
-
 #middleContent{
     width:100%;
-
 }
 #threeIcons{
     width:100%;
@@ -283,7 +337,6 @@ a:hover div:first-child{
     /*-webkit-animation-fill-mode:forwards; !* Safari 和 Chrome *!*/
 /*//设置对象状态为动画结束时的状态*/
 }
-
 @keyframes myBox{
     0%{
         transform:rotateY(0deg);
