@@ -316,6 +316,7 @@ li {
     margin: 5px 0 0 0;
 }
 ul.navlist li a {
+    font-size: 12px;
     -webkit-transition: all 0.3s ease-out;
     background: #cbcbcb url(../images/border.png) no-repeat;
     color: #174867;
