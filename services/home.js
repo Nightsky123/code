@@ -56,8 +56,8 @@ function changeHeightWidth() {
     fourDiv[2].style.height = theScreenHeight + "px";
     fourDiv[3].style.width = theScreenWidth + "px";
     fourDiv[3].style.height = theScreenHeight + "px";
-    canvasSize.style.width = theScreenHeight / 2 + "px";
-    canvasSize.style.height = theScreenHeight / 3 + "px";
+    // canvasSize.style.width = theScreenHeight / 2 + "px";
+    // canvasSize.style.height = theScreenHeight / 3 + "px";
 }
 drawThePlane();
 // canvas画线
