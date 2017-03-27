@@ -1,11 +1,9 @@
-* {
+body {
+    width: 100%;
+    font-size: 2px;
     margin: 0;
     padding: 0;
-}
-body{
     overflow-x: hidden;
-    width:100%;
-    height:100%;
 }
 .home {
     margin-top: 0px;
@@ -13,64 +11,74 @@ body{
 .allThePaper {
     margin: 0 auto;
 }
+
 #canvas {
     float: left;
+    width: 40%;
 }
 #homeUp {
     position: relative;
 }
-#homeUp{
+#homeUp {
+    margin: 0;
+    padding: 0;
     background-color: rgb(51, 51, 51);
     font-size: 13px;
 }
-#homeThird{
+#homeThird {
+    margin: 0;
+    padding: 0;
+    width:100%;
     background-color: rgb(51, 51, 51);
     font-size: 13px;
 }
 #homeMiddle, #homeDown {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     background-color: rgb(240, 240, 240);
 }
 #navs {
-    float: left;
+    /*float: left;*/
     color: white;
+    width:100%;
     margin-top: 2%;
     z-index: 1200;
-    height:40px;
+    height: 40px;
     position: fixed;
+    text-align: center;
+    /*margin:0 auto;*/
 }
-.buttonBox{
-    width:30%;
-    float:right;
-    margin-right: 40px;
+.buttonBox {
+    width: 100%;
+    float: right;
 }
 .nav {
+    /*margin-left:6%;*/
+    margin:0 10px 0 10px;
     float: left;
-    width: 100px;
-    height: 36px;
+    width: 50px;
+    height: 18px;
     text-align: center;
-    border-radius: 10px;
-    line-height: 36px;
-    margin: 5px;
+    border-radius: 5px;
+    line-height: 18px;
+    margin: 3px;
     cursor: pointer;
     border: 1px solid #000;
     background: #717a77;
     /* CSS3 Styling */
     background: -moz-linear-gradient(bottom, #0a0809, #0a0f0b 50%, #6d7673 50%, #afbdc0);
     background: -webkit-gradient(linear, left bottom, left top, from(#0a0809), to(#afbdc0), color-stop(0.5, #0a0f0b), color-stop(0.5, #6d7673));
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
-    -webkit-box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
-    box-shadow: 0px 0px 7px rgba(255, 255, 255, 0.5);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+    -webkit-box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
     /* Text Styling */
     color: #ff7d00;
     text-shadow: 0px -1px 0px #000;
     font-family: 'HighlandGothicFLFRegular', Impact, 'Arial Black', sans-serif;
-    font-size: 20px;
+    font-size: 10px;
 }
-
 .nav:visited {
     text-decoration: none;
     outline: none;
@@ -84,149 +92,185 @@ body{
 }
 .nav:hover {
     text-decoration: underline;
-    font-size: 21px;
-    -moz-box-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
-    -webkit-box-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
-    box-shadow: 0px 0px 7px rgba(255, 255, 255, 1);
+    font-size: 10px;
+    -moz-box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+    -webkit-box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 1);
 }
 .nav:active {
     border-width: 2px 1px 1px 2px;
-    font-size: 20px;
+    font-size: 10px;
 }
 .me {
-    width: 40%;
+    width: 100%;
     height: 250px;
     float: left;
-    margin-left: 34%;
     margin-top: 150px;
     color: white;
     z-index: 1000;
     position: absolute;
 }
-#myCanvas{
-    width:650px;
-    height:400px;
+#myCanvas {
+    margin-top: 50px;
+    margin-left: 12%;
+    width: 100%;
+    height: 400px;
 }
-#myCanvas{
+#myCanvas {
     animation: overturn 3s infinite;
     -webkit-animation: overturn 3s infinite;
     -o-animation: overturn 3s infinite;
     -moz-animation: overturn 3s infinite;
     /*规定动画的最后状态为结束状态*/
-    animation-direction:alternate;
-    -webkit-animation-direction:alternate; /* Safari 和 Chrome */
-    -o-animation-direction:alternate;
-    -moz-animation-direction:alternate;
+    animation-direction: alternate;
+    -webkit-animation-direction: alternate; /* Safari 和 Chrome */
+    -o-animation-direction: alternate;
+    -moz-animation-direction: alternate;
     /*规定动画是否在下一周期逆向地播放。*/
 }
-@keyframes overturn{
-    0%{
+@keyframes overturn {
+    0% {
         transform: scale(0.5);
         /*缩放*/
         transform: skew(-10deg);
         /*倾斜*/
     }
-    100%{
+    100% {
         transform: scale(0.8);
         transform: skew(-15deg);
     }
 }
-.spaceBoxFirst{
-    width: 25%;
-    height: 900px;
-    margin-top: 150px;
-    float: left;
-}
-.spaceBoxSecond{
-    width: 25%;
-    height: 900px;
-    margin-top: 150px;
-    float: right;
-}
 .homeMessage {
     padding-top: 15px;
-    width: 80%;
+    width: 100%;
     height: 100px;
-    margin: 30px;
     text-align: center;
     line-height: 30px;
-    font-size: 16px;
+    font-size: 13px;
 }
 .firstPic {
     width: 200px;
     margin: 0 auto;
 }
 .tips {
-    width: 85%;
+    width: 100%;
     margin-top: 20px;
     text-align: center;
-    font-size: 25px;
+    font-size: 18px;
 }
-.tips{
+.tips {
     animation: lefteaseinAnimate 1s ease 1;
     /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
     -webkit-animation: lefteaseinAnimate 1s ease 1;
     -o-animation: lefteaseinAnimate 1s ease 1;
     -moz-animation: lefteaseinAnimate 1s ease 1;
     /*规定动画的最后状态为结束状态*/
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
 }
-@keyframes lefteaseinAnimate{
-    0%{ transform: translateX(-2000px); opacity: 0;}
+@keyframes lefteaseinAnimate {
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
     /*在0%时设置文字在想X轴-2000px位移处（左边），透明度为0，也就是看不见文字*/
-    100%{ transform: translateX(0px); opacity: 1;}
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
     /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
 }
-@-webkit-keyframes lefteaseinAnimate{
-    0%{ -webkit-transform: translateX(-2000px); opacity: 0;}
-    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+@-webkit-keyframes lefteaseinAnimate {
+    0% {
+        -webkit-transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
 }
-@-o-keyframes lefteaseinAnimate{
-    0%{ -webkit-transform: translateX(-2000px); opacity: 0;}
-    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+@-o-keyframes lefteaseinAnimate {
+    0% {
+        -webkit-transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
 }
-@-moz-keyframes lefteaseinAnimate{
-    0%{ -webkit-transform: translateX(-2000px); opacity: 0;}
-    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+@-moz-keyframes lefteaseinAnimate {
+    0% {
+        -webkit-transform: translateX(-2000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
 }
-.homeMessage{
+.homeMessage {
     animation: righteaseinAnimate 1s ease 1;
     /*调用已定义好的动画lefteaseinAnimate，全程运行时间1S，进入的速度曲线为ease，只播放一次*/
     -webkit-animation: righteaseinAnimate 1s ease 1;
     -o-animation: righteaseinAnimate 1s ease 1;
     -moz-animation: righteaseinAnimate 1s ease 1;
     /*规定动画的最后状态为结束状态*/
-    animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
     -webkit-animation-fill-mode: forwards;
     -o-animation-fill-mode: forwards;
     -moz-animation-fill-mode: forwards;
 }
-@keyframes lefteaseinAnimate{
-    0%{ transform: translateX(-2000px); opacity: 0;}
+@keyframes lefteaseinAnimate {
+    0% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
     /*在0%时设置文字在想X轴-2000px位移处（左边），透明度为0，也就是看不见文字*/
-    100%{ transform: translateX(0px); opacity: 1;}
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
     /*在100%时设置文字在想X轴0px位移处，也就是原始布局的位置，透明度为1，也就是文字可以看见了*/
 }
-@-webkit-keyframes righteaseinAnimate{
-    0%{ -webkit-transform: translateX(2000px); opacity: 0;}
-    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+@-webkit-keyframes righteaseinAnimate {
+    0% {
+        -webkit-transform: translateX(2000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
 }
-@-o-keyframes righteaseinAnimate{
-    0%{ -webkit-transform: translateX(2000px); opacity: 0;}
-    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+@-o-keyframes righteaseinAnimate {
+    0% {
+        -webkit-transform: translateX(2000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
 }
-@-moz-keyframes righteaseinAnimate{
-    0%{ -webkit-transform: translateX(2000px); opacity: 0;}
-    100%{ -webkit-transform: translateX(0px); opacity: 1;}
+@-moz-keyframes righteaseinAnimate {
+    0% {
+        -webkit-transform: translateX(2000px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0px);
+        opacity: 1;
+    }
 }
 #middleBody {
     text-align: center;
-    margin-left: 30px;
+    /*margin-top: 30px;*/
     height: 900px;
-    padding: 150px;
+    /*padding: 150px;*/
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -252,14 +296,19 @@ body{
     position: relative;
     float: left;
 }
+#middleBody {
+}
+ul {
+    margin-top: 50px;
+}
 ul.navlist {
     list-style: none;
     display: block;
     width: 240px;
     position: relative;
-    top: 20px;
+    top: 10px;
     left: 20px;
-    padding: 60px 0 60px 0;
+    padding: 30px 0 60px 0;
     background: url(../images/shad2.png) no-repeat;
     -webkit-background-size: 50% 100%;
 }
@@ -283,74 +332,73 @@ ul.navlist li a:hover {
     color: #67a5cd;
     padding: 7px 15px 7px 30px;
 }
-#middleContent{
-    width:100%;
+#middleContent {
+    width: 100%;
 }
-#threeIcons{
-    width:100%;
-    text-align:center
+#threeIcons {
+    width: 100%;
+    text-align: center
 }
-#threeIcons ul{
-    width:100%;
-    margin-top:15%;
-    display:inline-block;
+#threeIcons ul {
+    width: 100%;
+    margin-top: 10%;
+    display: inline-block;
+    margin-left: 0;
+    padding: 0;
     /*ul父元素加center ul加inline-block*/
 }
-#threeIcons ul li
-{
-    width: 33%;
-    height: 180px;
-    float: left;
+#threeIcons ul li {
+    width: 100%;
+    height: 150px;
     text-align: center;
     display: inline-block;
     margin-top: 10%;
 }
-
-#myEmail{
-    width:300px;
-    height:150px;
-}
-#threeIcons ul li a{
-    display:inline-block;
+#threeIcons ul li a {
+    display: inline-block;
     position: relative;
-    width: 300px;
+    width: 100%;
     text-align: center;
 }
-#threeIcons ul li a>div{
+#threeIcons ul li a > div {
     position: absolute;
     text-align: center;
-    width:300px;
-    height:100px;
+    width: 100%;
+    height: 50px;
 }
-.contactWay{
-    font-size: 20px;
-    color:red;
+#myEmail, #myQq, #myWeiXin {
+    height: 50px;
+    width: 100%;
 }
-.fa{
+.contactWay {
+    font-size: 12px;
+    color: red;
+    width: 100%;
+}
+.fa {
     text-align: center;
-    color:white;
-    height:100px;
-    font-size:100px;
+    color: white;
+    height: 100px;
+    font-size: 80px;
 }
-
-a:hover div:first-child{
+a:hover div:first-child {
     animation: myBox 2s;
     -webkit-animation: myBox 2s;
     -moz-animation: myBox 2s;
     /*animation-fill-mode:forwards;*/
     /*-webkit-animation-fill-mode:forwards; !* Safari 和 Chrome *!*/
-//设置对象状态为动画结束时的状态*!*/
+    /*//设置对象状态为动画结束时的状态*!*!*/
 }
-@keyframes myBox{
-    0%{
-        transform:rotateY(0deg);
-        -webkit-transform:rotateY(0deg);
-        -moz-transform:rotateY(0deg);
+@keyframes myBox {
+    0% {
+        transform: rotateY(0deg);
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
     }
-    100%{
-        transform:rotateY(360deg);
-        -webkit-transform:rotateY(360deg);
-        -moz-transform:rotateY(360deg);
+    100% {
+        transform: rotateY(360deg);
+        -webkit-transform: rotateY(360deg);
+        -moz-transform: rotateY(360deg);
     }
 
 }

@@ -1,11 +1,22 @@
 var theScreenHeight = window.screen.height;
 var theScreenWidth = window.screen.width;
 //需要动态获取屏幕的宽高并控制canvas的大小
+function loadCSS() {
+    if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i))) {
+        debugger;
+        document.write('<link href="../stylesheets/phone.css" rel="stylesheet" type="text/css" media="screen" />');
+    }
+    else {
+        document.write('<link href="../stylesheets/home.css" rel="stylesheet" type="text/css" media="screen" />');
+    }
+}
+loadCSS();
 
 var Tips = document.getElementsByClassName('tips')[0];
+$("#hoMessage").text("你好，我是刘小四，一名前端开发工程师");
 Tips.innerHTML = '做一个固执的手艺人，精心雕琢代码';
 
-$("#theFatherBox").css("width", theScreenWidth);
+// $("#theFatherBox").css("width", theScreenWidth);
 $("#navs").css("width", theScreenWidth);
 
 //图片预加载
@@ -178,21 +189,18 @@ function threeContact() {
     $(".contactWay").hide();
     threeContactFather[0].addEventListener("mouseover", function () {
         $("#myEmail").text("15380925359@163.com");
-        $("#myEmail").css({"width": "300px", 'height': "150px"});
         $("#myEmail").slideDown();
         $(".contactWay")[1].style.display = "none";
         $(".contactWay")[2].style.display = "none";
     });
     threeContactFather[1].addEventListener("mouseover", function () {
         $("#myQq").text("1240135065");
-        $("#myQq").css({"width": "300px", 'height': "150px"});
         $("#myQq").slideDown();
         $(".contactWay")[0].style.display = "none";
         $(".contactWay")[2].style.display = "none";
     });
     threeContactFather[2].addEventListener("mouseover", function () {
         $("#myWeiXin").text("liu15380925359");
-        $("#myWeiXin").css({"width": "300px", 'height': "150px"});
         $("#myWeiXin").slideDown();
         $(".contactWay")[0].style.display = "none";
         $(".contactWay")[1].style.display = "none";
