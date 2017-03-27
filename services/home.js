@@ -3,7 +3,6 @@ var theScreenWidth = window.screen.width;
 //需要动态获取屏幕的宽高并控制canvas的大小
 function loadCSS() {
     if((navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|wOSBrowser|BrowserNG|WebOS)/i))) {
-        debugger;
         document.write('<link href="../stylesheets/phone.css" rel="stylesheet" type="text/css" media="screen" />');
     }
     else {
