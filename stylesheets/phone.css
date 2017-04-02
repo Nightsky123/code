@@ -22,20 +22,20 @@ body {
 #homeUp {
     margin: 0;
     padding: 0;
-    background-color: rgb(51, 51, 51);
+    /*background-color: rgb(51, 51, 51);*/
     font-size: 13px;
 }
 #homeThird {
     margin: 0;
     padding: 0;
     width:100%;
-    background-color: rgb(51, 51, 51);
+    /*background-color: rgb(51, 51, 51);*/
     font-size: 13px;
 }
 #homeMiddle, #homeDown {
     margin: 0;
     padding: 0;
-    background-color: rgb(240, 240, 240);
+    /*background-color: rgb(240, 240, 240);*/
 }
 #navs {
     /*float: left;    */
