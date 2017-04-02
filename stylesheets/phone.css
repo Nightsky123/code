@@ -22,20 +22,20 @@ body {
 #homeUp {
     margin: 0;
     padding: 0;
-    /*background-color: rgb(51, 51, 51);*/
+    background-color: rgb(51, 51, 51);
     font-size: 13px;
 }
 #homeThird {
     margin: 0;
     padding: 0;
     width:100%;
-    /*background-color: rgb(51, 51, 51);*/
+    background-color: rgb(51, 51, 51);
     font-size: 13px;
 }
 #homeMiddle, #homeDown {
     margin: 0;
     padding: 0;
-    /*background-color: rgb(240, 240, 240);*/
+    background-color: rgb(51, 51, 51);
 }
 #navs {
     /*float: left;    */
@@ -58,8 +58,8 @@ body {
     /*margin-left:6%;*/
     /*margin:0 10px 0 10px;*/
     float: left;
-    width: 50px;
-    height: 18px;
+    width: 60px;
+    height: 20px;
     text-align: center;
     border-radius: 5px;
     line-height: 18px;
@@ -131,14 +131,14 @@ body {
 }
 @keyframes overturn {
     0% {
-        transform: scale(0.5);
+        /*transform: scale(0.5);*/
         /*缩放*/
         transform: skew(-10deg);
         /*倾斜*/
     }
     100% {
-        transform: scale(0.8);
-        transform: skew(-15deg);
+        /*transform: scale(3.0);*/
+        transform: skew(-25deg);
     }
 }
 .homeMessage {
@@ -275,6 +275,11 @@ body {
 #middleFirst {
     margin-top: 100px;
 }
+#effect{
+    width:100%;
+    z-index:1;
+    position: absolute;
+}
 .question {
     list-style: none;
     border-radius: 5px;
@@ -293,11 +298,12 @@ body {
 .navboxlist {
     position: relative;
     float: left;
+    z-index:12;
 }
 #middleBody {
 }
 ul {
-    margin-top: 50px;
+    margin-top: 30px;
 }
 ul.navlist {
     list-style: none;

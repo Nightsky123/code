@@ -13,7 +13,7 @@ loadCSS();
 
 var Tips = document.getElementsByClassName('tips')[0];
 $("#hoMessage").text("你好，我是刘小四，一名前端开发工程师");
-Tips.innerHTML = '做一个固执的手艺人，精心雕琢代码';
+Tips.innerHTML = '做一个固执的手艺人';
 
 // $("#theFatherBox").css("width", theScreenWidth);
 $("#navs").css("width", theScreenWidth);
@@ -47,7 +47,8 @@ changeHeightWidth();
 //适配不同尺寸屏幕
 function changeHeightWidth() {
     var fourDiv = $(".theOneOfFour");
-    var canvasSize = document.getElementById("myCanvas");
+    var Effect = document.getElementById("effect");
+    Effect.style.height = theScreenHeight+"px";
     fourDiv[0].style.width = theScreenWidth + "px";
     fourDiv[0].style.height = theScreenHeight + "px";
     fourDiv[1].style.width = theScreenWidth + "px";
@@ -187,7 +188,7 @@ function threeContact() {
     var threeContactFather = $(".contactWayFather");
     $(".contactWay").hide();
     threeContactFather[0].addEventListener("mouseover", function () {
-        $("#myEmail").text("15380925359@163.com");
+        $("#myEmail").text("13770655629@163.com");
         $("#myEmail").slideDown();
         $(".contactWay")[1].style.display = "none";
         $(".contactWay")[2].style.display = "none";
@@ -210,7 +211,7 @@ function threeContact() {
 }
 
 //粒子
-particlesJS('homeUp', {
+particlesJS('effect', {
     particles: {
         color: '#fff',
         shape: 'circle', // "circle", "edge" or "triangle"

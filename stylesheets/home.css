@@ -10,7 +10,11 @@ body{
 .home {
     margin-top: 0px;
 }
-
+#effect{
+    width:100%;
+    z-index:1;
+    position: absolute;
+}
 .allThePaper {
     margin: 0 auto;
 }
@@ -252,6 +256,7 @@ body{
 .navboxlist {
     position: relative;
     float: left;
+    z-index: 12;
 }
 ul.navlist {
     list-style: none;
