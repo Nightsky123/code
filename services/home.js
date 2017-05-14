@@ -57,8 +57,6 @@ function changeHeightWidth() {
     fourDiv[2].style.height = theScreenHeight + "px";
     fourDiv[3].style.width = theScreenWidth + "px";
     fourDiv[3].style.height = theScreenHeight + "px";
-    // canvasSize.style.width = theScreenHeight / 2 + "px";
-    // canvasSize.style.height = theScreenHeight / 3 + "px";
 }
 drawThePlane();
 // canvas画线
@@ -168,7 +166,6 @@ function theNavsText() {
         var initialPosition = 2 * theScreenHeight;
         var allTop = 3 * theScreenHeight;
         var time = null;
-
         function scrollPositionThree() {
             if (heightTwoSec !== allTop) {
                 heightTwoSec = allTop;
@@ -209,6 +206,76 @@ function threeContact() {
         $(".contactWay").hide();
     });
 }
+
+//最末尾的饼状图
+drawPic();
+function drawPic() {
+    var myChart = echarts.init(document.getElementById('circlePic'));
+
+    option = {
+        backgroundColor: '#2c343c',
+        visualMap: {
+            type: 'continuous',
+            min: 0,
+            max: 100,
+            text:['HIGH','Low'],
+            realtime: false,
+            calculable : true,
+            color: ['orangered','yellow','lightskyblue'],
+            x:'300px'
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                data:[
+                    {value:90, name:'Html'},
+                    {value:85, name:'Css'},
+                    {value:80, name:'Javascript'},
+                    {value:75, name:'Vue.js'},
+                    {value:85, name:'Echarts/Highcharts/D3.js'}
+                ],
+                roseType: 'angle',
+                label: {
+                    normal: {
+                        textStyle: {
+                            color: 'rgba(255, 255, 255, 0.5)',
+                            fontSize :'33'
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        lineStyle: {
+                            color: 'rgba(255, 255, 255, 0.3)'
+                        }
+                    }
+                },
+                itemStyle: {
+                    normal: {
+                        color: '#c23531',
+                        shadowBlur: 200,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                }
+            }
+        ]
+    };
+    myChart.setOption(option);
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 //粒子
 particlesJS('effect', {
