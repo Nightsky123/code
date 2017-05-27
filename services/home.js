@@ -230,18 +230,19 @@ function drawPic() {
                 type: 'pie',
                 radius: '55%',
                 data:[
-                    {value:90, name:'Html'},
-                    {value:85, name:'Css'},
-                    {value:80, name:'Javascript'},
+                    {value:90, name:'Html/Html5'},
+                    {value:90, name:'Css/Css3'},
+                    {value:90, name:'Javascript'},
                     {value:75, name:'Vue.js'},
-                    {value:85, name:'Echarts/Highcharts/D3.js'}
+                    {value:85, name:'Echarts/Highcharts/D3.js'},
+                    {value:60, name:'Java'}
                 ],
                 roseType: 'angle',
                 label: {
                     normal: {
                         textStyle: {
                             color: 'rgba(255, 255, 255, 0.5)',
-                            fontSize :'33'
+                            fontSize :'30'
                         }
                     }
                 },
