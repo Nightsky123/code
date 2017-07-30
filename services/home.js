@@ -1,10 +1,7 @@
 var homePageJs = function () {
     var _this = this;
-    _this.Event = function(){
-        console.log(_this);
 
-    };
-    _this.loadCSS = function (document) {
+    _this.loadCSS = function () {
         var link = document.createElement("link");
         link.type = "text/css";
         link.rel = "stylesheet";
@@ -18,6 +15,7 @@ var homePageJs = function () {
         document.getElementsByTagName("head")[0].appendChild(link);
     };
     _this.imageLoad = function () {
+        var imageArr = new Array;
         imageArr[0] = " ../images/always.jpg";
         imageArr[1] = " ../images/clock.jpg";
         imageArr[2] = "../images/cloud.jpg";
@@ -32,16 +30,15 @@ var homePageJs = function () {
         homePageJs.preload(imageArr);
     };
     //适配不同尺寸屏幕
-    _this.changeHeightWidth = function (theScreenHeight,theScreenWidth,Effect,fourDiv) {
-        Effect.style.height = theScreenHeight + "px";
-        fourDiv[0].style.width = theScreenWidth + "px";
-        fourDiv[0].style.height = theScreenHeight + "px";
-        fourDiv[1].style.width = theScreenWidth + "px";
-        fourDiv[1].style.height = theScreenHeight + "px";
-        fourDiv[2].style.width = theScreenWidth + "px";
-        fourDiv[2].style.height = theScreenHeight + "px";
-        fourDiv[3].style.width = theScreenWidth + "px";
-        fourDiv[3].style.height = theScreenHeight + "px";
+    _this.changeHeightWidth = function () {
+        var theScreenHeight = window.screen.height;
+        var theScreenWidth = window.screen.width;
+        var fourDiv = $(".theOneOfFour");
+
+        fourDiv.each(function(){
+            $(this)[0].style.width = theScreenWidth + "px";
+            $(this)[0].style.height = theScreenHeight + "px";
+        });
     };
     _this.preload = function (imageArr) {
         var images = new Array;
@@ -52,8 +49,8 @@ var homePageJs = function () {
         }
     };
     // canvas画线
-    _this.drawThePlane = function (c) {
-
+    _this.drawThePlane = function () {
+        var c = document.getElementById("myCanvas");
         var cxt = c.getContext("2d");
         cxt.lineWidth = 6;//线条的宽度
         cxt.strokeStyle = "white";//线条的颜色
@@ -106,7 +103,9 @@ var homePageJs = function () {
 
     };
     //导航栏文本及事件
-    _this.theNavsText = function(Nav,theScreenHeight) {
+    _this.theNavsText = function () {
+        var theScreenHeight = window.screen.height;
+        var Nav = document.getElementsByClassName('nav');
         Nav[0].innerHTML = "HOME";
         Nav[1].innerHTML = "BLOG";
         Nav[2].innerHTML = "CONTACT";
@@ -171,8 +170,8 @@ var homePageJs = function () {
         });
     };
     //三种方式的事件
-    _this.threeContact = function (threeContactFather) {
-
+    _this.threeContact = function () {
+        var threeContactFather = $(".contactWayFather");
         $(".contactWay").hide();
         threeContactFather[0].addEventListener("mouseover", function () {
             $("#myEmail").text("13770655629@163.com");
@@ -197,8 +196,8 @@ var homePageJs = function () {
         });
     };
     //最末尾的饼状图
-    _this.drawPic = function (myChart) {
-
+    _this.drawPic = function () {
+        var myChart = echarts.init(document.getElementById('circlePic'));
         option = {
             backgroundColor: '#2c343c',
             visualMap: {
@@ -303,32 +302,25 @@ particlesJS('effect', {
     retina_detect: true
 });
 
-window.onload =function(){
+window.onload = function () {
     var youNeedToLoad = new homePageJs();
-    var theScreenHeight = window.screen.height;
-    var theScreenWidth = window.screen.width;
-    var Effect = document.getElementById("effect");
-    var fourDiv = $(".theOneOfFour");
-    var c = document.getElementById("myCanvas");
 
-    var Nav = document.getElementsByClassName('nav');
-    var threeContactFather = $(".contactWayFather");
-    var myChart = echarts.init(document.getElementById('circlePic'));
-//需要动态获取屏幕的宽高并控制canvas的大小
+    var theScreenWidth = window.screen.width;
+
+    //需要动态获取屏幕的宽高并控制canvas的大小
     $("#navs").css("width", theScreenWidth);
     var Tips = document.getElementsByClassName('tips')[0];
     $("#hoMessage").text("你好，我是刘小四，一名前端开发工程师");
     Tips.innerHTML = '做一个固执的手艺人';
+    
+    $("#theFatherBox").css("width", theScreenWidth);
 
-// $("#theFatherBox").css("width", theScreenWidth);
-//
-    console.log(youNeedToLoad.changeHeightWidth);
-    youNeedToLoad.loadCSS(document);
-    youNeedToLoad.changeHeightWidth(theScreenHeight,theScreenWidth,Effect,fourDiv);
-    youNeedToLoad.drawThePlane(c);
-    youNeedToLoad.theNavsText(Nav,theScreenHeight);
-    youNeedToLoad.threeContact(threeContactFather);
-    youNeedToLoad.drawPic(myChart);
+    youNeedToLoad.loadCSS();
+    youNeedToLoad.changeHeightWidth();
+    youNeedToLoad.drawThePlane();
+    youNeedToLoad.theNavsText();
+    youNeedToLoad.threeContact();
+    youNeedToLoad.drawPic();
 
 };
 
