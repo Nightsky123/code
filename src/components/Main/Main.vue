@@ -45,9 +45,10 @@
   .tabClass{
     width:20px;
     transition:width 1s;
-    height: 100%;
+    height: auto;
     position: absolute;
     top: 0;
+    bottom:-1px;
     background: #FFCCCC;
   }
   @keyframes leftMove {
@@ -58,8 +59,11 @@
   .tabClass:hover{
     width:120px;
   }
-  .tabClass:hover ul a{
+  .tabClass:hover ul li{
     width:120px;
+    a{
+      width:120px;
+    }
   }
   .Main ul{
     display: block;
@@ -72,15 +76,18 @@
     margin:0;
     color: @color;
     li{
+      transition:width 1s;
       width:0;
       margin: 10px 0;
       text-align: left;
+      border-bottom: 1px solid #FF99CC;
       a{
+        text-decoration: none;
         transition:width 1s;
         display: inline-block;
         width: 0;
         overflow: hidden;
-        padding-left: 10px;
+        padding-left: 20px;
       }
     }
     .active{
@@ -96,10 +103,7 @@
   a:link{
     color:@color;
   }
-  a:focus li{
-    color: red;
-    background-color: red;
-  }
+
 
  a:active{
     color: green;
