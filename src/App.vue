@@ -8,7 +8,8 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+
 }
 </script>
 
@@ -18,8 +19,7 @@ export default {
     padding: 0;
     height:100%;
     width:100%;
-    overflow: hidden;
-    background-color: #99cccc;
+    /*background-color: #99cccc;*/
   }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -27,7 +27,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 30px;
+  background: #fff;
+  /*background: -webkit-linear-gradient(top,#99cccc,#78BBA9);*/
+  height: 100%;
 
 }
 </style>

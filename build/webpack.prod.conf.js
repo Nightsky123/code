@@ -29,6 +29,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    //这是压缩代码中的配置
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
