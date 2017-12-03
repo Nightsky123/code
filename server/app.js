@@ -6,13 +6,9 @@ let cookieParser = require('cookie-parser');
 let bodyParser = require('body-parser');
 let cors = require('cors'); //引入 cors
 
-
 let app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-
-
-
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -32,33 +28,20 @@ let users = require('./routes/users');
 
 //中间件 允许跨域 hash
 let allowCrossDomain = function(req, res, next) {
-  res.header('Access-Control-Allow-Origin', 'http://localhost:8080');
+  res.header('Access-Control-Allow-Origin', 'http://localhost:8081');
   res.header('Access-Control-Allow-Methods', 'PUT,GET,POST,DELETE,OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   res.header('Access-Control-Allow-Credentials','true');
   next();
 };
+
 app.use(allowCrossDomain);
-
-//history
-// const staticFileMiddleware = express.static('public');
-// app.use(staticFileMiddleware);
-// app.use(history({
-//   disableDotRule: true,
-//   verbose: true
-// }));
-// app.use(staticFileMiddleware);
-
-
-
 app.use('/', index);
 app.use('/users', users);
-
 
 app.use(cors({
   origin:['http://localhost:3000'],//域访问
   methods:['GET','POST'],//请求方式
-  // alloweHeaders:['application/x-www-form-urlencoded','form-urlencoded']
   alloweHeaders:['x-requested-with', 'content-type', 'accept', 'origin', 'authorization']//两种请求头
 }));
 // catch 404 and forward to error handler
