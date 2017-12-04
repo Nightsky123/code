@@ -3,18 +3,11 @@
   <div id="mapPage" class="mapPage"></div>
 </template>
 <script>
-//  let bsmweqap = require('echarts/extension/BMap/doc/BMap.js');
-//  let as = require('zrender/zrender.js');
-//  let echarts = require('echarts/src/echarts.js');
-//  let bsmap = require('echarts/extension/BMap/src/main.js');
-//
-//  let bsamap = require('echarts/src/chart/map.js');
-
 
 import echarts from 'echarts/src/echarts'
 import * as map from 'echarts/src/chart/map'
 import * as BMapExtension from 'echarts/extension/BMap/src/main'
-
+//高版本的echarts需要用下面的方法导入地图，但是效果不好，目前用的echarts2.2.7，上面方法将地图和echarts结合。
 //let chinajs = require('echarts/map/js/china.js');
 //let chinajson = require('echarts/map/json/china.json');
   import BMap from 'BMap'
@@ -22,7 +15,6 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
     name:'myTrial',
     data () {
       return {
-
       }
     },
     mounted() {
@@ -31,8 +23,8 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
       let map = BMapExt.getMap();
       let container = BMapExt.getEchartsContainer();
       let startPoint = {
-        x: 113.328755, //天河城
-        y: 23.135588
+        x: 113.328755, 
+        y: 33.135588
       };
       let point = new BMap.Point(startPoint.x, startPoint.y);
       map.centerAndZoom(point, 5);
@@ -749,7 +741,6 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
     height: 100%;
     overflow: hidden;
     margin: 0;
-    /*font-family: "微软雅黑";*/
   }
   .anchorBL {
     display:none !important;
