@@ -5,13 +5,16 @@
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 下载依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# install完成后还需要单独install下echarts，因为我只找到目前这个版本才支持页面中的效果，命令如下，
+npm install echarts@2.2.7-beta7 
+
+# serve with hot reload at localhost:8081 热加载在本地的8081端口，可通过这命令启动
 npm run dev
 
-# build for production with minification
+# build for production with minification 打包命令
 npm run build
 
 # build for production and view the bundle analyzer report
