@@ -44,7 +44,6 @@
   .leftNav{
     height: 100%;
     width: 80%;
-    /*margin-top: 20px;*/
     left: 20px;
     display: block;
     margin:0 auto;
