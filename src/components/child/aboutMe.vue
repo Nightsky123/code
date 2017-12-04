@@ -68,9 +68,6 @@
           success:function (data,index) {
               //将获取到的数据绑在data
               self._data[arg] = data;
-              //动态路由
-              debugger;
-
           }
         })
       }
@@ -101,7 +98,7 @@
     display: inline-block;
     margin: 0 10px;
   }
-
+  
   a {
     color: @leftTabColor;
   }
@@ -178,6 +175,4 @@
       opacity: 1;
     }
   }
-
-
 </style>
