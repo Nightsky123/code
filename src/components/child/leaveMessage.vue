@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'third',
+  name: 'leaveMessage',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',

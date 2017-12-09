@@ -29,8 +29,8 @@
     <ul class="tab">
       <li><router-link to="/aboutMe"  @click.native="changeColor($event)">{{allWord.showTheWord.tab1}}</router-link></li>
       <li><router-link to="/myTrial"   @click.native="changeColor($event)">{{allWord.showTheWord.tab2}}</router-link></li>
-      <li><router-link to="/second"  @click.native="changeColor($event)">{{allWord.showTheWord.tab3}}</router-link></li>
-      <li><router-link to="/third"   @click.native="changeColor($event)">{{allWord.showTheWord.tab4}}</router-link></li>
+      <!--<li><router-link to="/second"  @click.native="changeColor($event)">{{allWord.showTheWord.tab3}}</router-link></li>-->
+      <li><router-link to="/leaveMessage"   @click.native="changeColor($event)">{{allWord.showTheWord.tab4}}</router-link></li>
       <li><router-link to="/starFlow"   @click.native="changeColor($event)">{{allWord.showTheWord.tab5}}</router-link></li>
     </ul>
     </div>
@@ -42,7 +42,7 @@
   import starFlow from './contactMe'
   import aboutMe from '../child/aboutMe'
   import second from '../child/second'
-  import Hello from '../child/third'
+  import Hello from '../child/leaveMessage'
   import myTrial from '../child/myTrial'
   export default {
     name: 'Main',

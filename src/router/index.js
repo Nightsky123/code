@@ -4,7 +4,7 @@ import VueLazyload from 'vue-lazyload'  //引入懒加载
 import echarts from 'echarts/src/echarts'   // 引入echarts
 import VueQuillEditor from 'vue-quill-editor'  //富文本编辑器
 
-import third from '@/components/child/third'
+import leaveMessage from '@/components/child/leaveMessage'
 import aboutMe from '@/components/child/aboutMe'
 import second from '@/components/child/second'
 import myTrial from '@/components/child/myTrial'
@@ -43,7 +43,7 @@ export default new Router({
       children:[
         {  path: '/aboutMe', component: aboutMe},
         {  path: '/second', component: second},
-        {  path: '/third', component: third},
+        {  path: '/leaveMessage', component: leaveMessage},
         {  path: '/myTrial', component: myTrial},
         {  path: '/starFlow', component: starFlow},
 

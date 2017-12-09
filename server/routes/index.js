@@ -116,6 +116,6 @@ router.post('/allTheMessage', function(req, res, next) {
 
 //返回echarts图数据
 router.post('/diagram', function(req, res, next) {
-  res.json({name:['HTML','CSS','JAVASCRIPT','JQUERY','VUE','D3.js','ECHARTS'],data:[84, 86, 88, 80, 90,70,75]});
+  res.json({name:['photoshop','webpack','nodejs','HTML/HTML5','CSS/CSS3','JAVASCRIPT/ES6','JQUERY','VUE2.0','D3.js','ECHARTS'],data:[50,60,70,84, 86, 88, 80, 90,70,75]});
 });
 module.exports = router;

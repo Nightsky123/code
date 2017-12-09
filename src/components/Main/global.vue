@@ -10,7 +10,7 @@
       tab1: '关于我',
       tab2: '我的轨迹',
       tab3: '所学',
-      tab4: '随想',
+      tab4: '网友留言',
       tab5: '联系我',
       myself: '我是刘小四,一名普通的前端开发工程师,我的梦想是世界和平。'
     },
@@ -31,8 +31,10 @@
       myself: 'I am Liu Xiao four ^_^, an ordinary front-end development engineers, my dream is world peace.'
     }
   };
+
   export default
   {
     allWord
   }
+
 </script>
