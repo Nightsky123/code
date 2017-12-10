@@ -11,7 +11,7 @@
             <h2>{{listData.data}}</h2>
             <p>------来自{{listData.name===""?'无名氏':listData.name}}</p>
             <p><span class="blogpic">{{listData.data.match(/\s{4}/g)}}<a href=""><img src="" /></a></span></p>
-            <a class="readmore" @click="textDetail(listData)">详情&gt;&gt;</a></div>
+            <a class="readmore" @click="textDetail(listData.data)">详情&gt;&gt;</a></div>
         </li>
       </ul>
       <div class="textDetail">
@@ -51,7 +51,7 @@ export default {
           })
       },
       textDetail:function(textDetail){
-      this.whichText = textDetail.detail;
+          this.whichText = textDetail;
     }
   }
 }
@@ -73,13 +73,13 @@ export default {
     position: absolute;
     right: 0;
     top: 0;
-    /*z-index: 1;*/
     height: 100%;
     .textDetailChild{
       padding-top: 20px;
       float: right;
       width: 100%;
       height: 100%;
+      color:#fff;
       background: -webkit-linear-gradient(left,#000,#555);
     }
   }
@@ -122,7 +122,6 @@ export default {
     .cbp_tmicon{
       width: 10px;
       height: 10px;
-      font-family: 'ecoico';
       speak: none;
       font-style: normal;
       font-weight: normal;

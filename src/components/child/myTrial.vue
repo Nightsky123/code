@@ -23,7 +23,7 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
       let map = BMapExt.getMap();
       let container = BMapExt.getEchartsContainer();
       let startPoint = {
-        x: 113.328755, 
+        x: 113.328755,
         y: 33.135588
       };
       let point = new BMap.Point(startPoint.x, startPoint.y);
@@ -191,7 +191,6 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
         ]
       });
 
-
       let option = {
         color: ['gold','aqua','lime'],
         title : {
@@ -208,7 +207,6 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
         legend: {
           orient: 'vertical',
           x:'left',
-//          data:['北京', '上海', '广州'],
           data:[],
           selectedMode: 'single',
           selected:{
@@ -720,17 +718,13 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
         ]
       };
 
-
       if (myChart && myChart.dispose) {
         myChart.dispose();
       }
       let myChart = BMapExt.initECharts(container);
       window.onresize = myChart.resize;
       BMapExt.setOption(option, true)
-
     }
-
-
 
 
   }

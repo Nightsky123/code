@@ -1,6 +1,5 @@
 <template>
   <div class="starFlow">
-    <!--<canvas id="myCanvas"></canvas>-->
     <div>
       <div class="average">
         <div id="myChart" :style="{width: '600px', height: '450px'}"></div>
@@ -335,14 +334,12 @@
         console.log('editor ready!', editor)
       },
       onEditorChange({editor, html, text}) {
-        // console.log('editor change!', editor, html, text)
         this.content = html
       },
       sendMessage(){
           let self = this;
-          debugger;
-          if(this.messageContent!==''){
 
+          if(this.messageContent!==''){
             $.ajax({
               type:'POST',
               url:'http://localhost:3000/allTheMessage',
@@ -358,7 +355,6 @@
               success:function (data,index) {
                 self.options = self.allTipsContent[3].options;
                 self.showNotification = true;
-
               }
             })
           }else{
@@ -428,7 +424,6 @@
     border: none;
     text-align: center;
     font-size: 15px;
-    /*padding: 10px 0;*/
   }
 
   #idCard {
