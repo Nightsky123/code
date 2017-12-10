@@ -206,9 +206,9 @@
             }
           ],
           grid: {
-            x: 160,
-//            x2:100, //控制Xy显示文字
-//            y2:200
+             x: 160,
+             //x2:100, //控制Xy显示文字
+             //y2:200
           },
           series: [
             {
@@ -222,7 +222,7 @@
                 normal: {
                   //每个柱子的颜色即为colorList数组里的每一项，如果柱子数目多于colorList的长度，则柱子颜色循环使用该数组
                   color: function (params) {
-                    let colorList = ['rgb(164,205,238)'];
+                    let colorList = ['rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)','rgb(164,205,238)'];
                     return colorList[params.dataIndex];
                   }
                 }
@@ -340,6 +340,7 @@
       },
       sendMessage(){
           let self = this;
+          debugger;
           if(this.messageContent!==''){
 
             $.ajax({

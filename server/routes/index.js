@@ -77,7 +77,7 @@ readDataAndSend(me);
 //留言接口,写入成功报success,反之报false
 router.post('/allTheMessage', function(req, res, next) {
   console.log(req.body.message);
-  //把流言装换成对象
+  //把留言装换成对象
   let visitorMessage = {};
   visitorMessage.name = req.body.visitorname;
   visitorMessage.data = req.body.message;
@@ -114,6 +114,25 @@ router.post('/allTheMessage', function(req, res, next) {
   // });
 });
 
+router.post('/readAllTheMessage',function(req, res, next){
+
+  //读文件然后返回即可
+  fs.readFile('../static/visitorMessageData/message.json','utf8',function (err, data) {
+    let allTheData=JSON.parse(data),
+        allTheDataStr = JSON.stringify(allTheData);
+    fs.writeFile('../static/visitorMessageData/message.json',allTheDataStr,function(err){
+      if(err){
+        res.json({result:'false'});
+        console.log('写文件操作失败');
+      } else {
+        // res.json({result:'sucess'});
+        console.log('写文件操作成功');
+        res.json({result:'success',message:allTheDataStr});
+      }
+    });
+  });
+
+});
 //返回echarts图数据
 router.post('/diagram', function(req, res, next) {
   res.json({name:['photoshop','webpack','nodejs','HTML/HTML5','CSS/CSS3','JAVASCRIPT/ES6','JQUERY','VUE2.0','D3.js','ECHARTS'],data:[50,60,70,84, 86, 88, 80, 90,70,75]});
