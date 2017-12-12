@@ -37,6 +37,7 @@ export default {
   methods:{
       readAllTheMessage:function(){
           let self = this;
+
           $.ajax({
             type:'POST',
             url:'http://localhost:3000/readAllTheMessage',

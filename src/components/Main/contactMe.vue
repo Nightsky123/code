@@ -23,18 +23,21 @@
         <div id="leaveMessage">
           <h3>可以在这留言给我哦</h3>
           <!-- use with components - bidirectioarticleDatadata binding（双向数据绑定） -->
-          <quill-editor ref="myTextEditor"
+          <quill-editor :style="{width: '600px',height:'200px'}" ref="myTextEditor"
                         v-model="messageContent"
                         :options="editorOption"
                         @blur="onEditorBlur($event)"
                         @focus="onEditorFocus($event)"
                         @ready="onEditorReady($event)">
           </quill-editor>
-          <div><input type="" class="visitorName" placeholder="请一并留下你的名字"/></div>
+        </div>
+        <div class="submitButton">
+          <input type="text" class="visitorName" placeholder="请一并留下你的名字"/>
           <button class="submitLeave" v-on:click="sendMessage">确定</button>
         </div>
       </div>
     </div>
+
     <tips :options.sync="options" :show.sync="showNotification" @close="closeNotification"></tips>
   </div>
 </template>
@@ -412,18 +415,29 @@
 
   #leaveMessage{
     background: #fff;
+    height: 333px;
   }
-
+  .average{
+      flex-direction:  column;
+  }
+  .submitButton{
+    text-align: right;
+    width: 75%;
+  }
   .submitLeave{
-    width: 100%;
+    margin-top: 6px;
     font-size: 18px;
-    padding: 10px 0;
+    padding: 4px 10px;
+    background: #25adf3;
+    border: 1px solid #25adf3;
+    border-radius: 3px;
   }
   .visitorName{
-    width: 100%;
-    border: none;
+    width: 600px;
     text-align: center;
     font-size: 15px;
+    height: 31px;
+    border: 1px solid #25adf3;
   }
 
   #idCard {
@@ -445,7 +459,9 @@
       }
     }
   }
-
+  .ql-container .ql-snow{
+  height: 300px;
+  }
   h1, h2 {
     font-weight: normal;
   }
