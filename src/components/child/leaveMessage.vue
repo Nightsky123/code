@@ -3,8 +3,8 @@
     <div class="nav">
       <ul class="timeline">
         <li v-model='allList' v-for="listData in allList">
-          <time class="cbp_tmtime"><span></span> <span></span></time>
-          <div class="cbp_tmicon"></div>
+          <!--<time class="cbp_tmtime"><span></span> <span></span></time>-->
+          <!--<div class="cbp_tmicon"></div>-->
           <div class="cbp_tmlabel"  data-scroll-reveal="enter right over 1s" data-scroll-reveal-id="2" style="-webkit-transform: translatex(0);transform: translatex(0);opacity: 1;-webkit-transition: -webkit-transform 1s ease-in-out 0s,  opacity 1s ease-in-out 0s;transition: transform 1s ease-in-out 0s, opacity 1s ease-in-out 0s;-webkit-perspective: 1000;-webkit-backface-visibility: hidden;" data-scroll-reveal-initialized="true">
             <!--<h2>{{listData.detail.match(/\S{20}/i)[0]}}</h2>-->
             <!--<p><span class="blogpic">{{listData.detail.match(/\s{4}/g)}}<a href=""><img src="" /></a></span></p>-->
@@ -88,6 +88,7 @@ export default {
     margin: 0 50px 15px 180px;
     background: #3594cb;
     color: #fff;
+    width: 100%;
     padding: 2em;
     position: relative;
     border-radius: 5px;

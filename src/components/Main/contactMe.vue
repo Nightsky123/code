@@ -23,7 +23,7 @@
         <div id="leaveMessage">
           <h3>可以在这留言给我哦</h3>
           <!-- use with components - bidirectioarticleDatadata binding（双向数据绑定） -->
-          <quill-editor :style="{width: '600px',height:'200px'}" ref="myTextEditor"
+          <quill-editor :style="{width: '100%',height:'200px'}" ref="myTextEditor"
                         v-model="messageContent"
                         :options="editorOption"
                         @blur="onEditorBlur($event)"
@@ -415,14 +415,14 @@
 
   #leaveMessage{
     background: #fff;
-    height: 333px;
+    height: 300px;
   }
   .average{
       flex-direction:  column;
   }
   .submitButton{
     text-align: right;
-    width: 75%;
+    width: 100%;
   }
   .submitLeave{
     margin-top: 6px;
@@ -431,13 +431,18 @@
     background: #25adf3;
     border: 1px solid #25adf3;
     border-radius: 3px;
+    color: white;
   }
   .visitorName{
-    width: 600px;
+    width: 100%;
     text-align: center;
     font-size: 15px;
     height: 31px;
-    border: 1px solid #25adf3;
+    border-top:0;
+    outline: none;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
   }
 
   #idCard {
