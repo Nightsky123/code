@@ -25,7 +25,6 @@
           //将获取到的数据绑在data
           self._data.articlText = data.split('\\')[0];
 
-
         }
       });
     }

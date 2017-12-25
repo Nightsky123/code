@@ -64,7 +64,6 @@ export default {
     font-weight: normal;
   }
   .readAllTheMessage{
-    height: 100%;
     .nav{
       height: 100%;
     }

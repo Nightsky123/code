@@ -92,9 +92,9 @@
             content: 'info',
             options: {
               autoClose: true,
-              showTime: 5000,
+              showTime: 3000,
               backgroundColor: '#769FCD',
-              content: 'There is an optional countdown bar for the auto close mode.',
+              content: '保存成功.',
               countdownBar: true,
               barColor: '#415F77'
             }
@@ -341,7 +341,6 @@
       },
       sendMessage(){
           let self = this;
-
           if(this.messageContent!==''){
             $.ajax({
               type:'POST',
@@ -358,6 +357,8 @@
               success:function (data,index) {
                 self.options = self.allTipsContent[3].options;
                 self.showNotification = true;
+                $('.ql-editor').find('p').text('')
+                $('.visitorName').val('');
               }
             })
           }else{
