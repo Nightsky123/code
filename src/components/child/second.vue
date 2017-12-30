@@ -4,6 +4,7 @@
     <ul class="popup-title">
       <li v-for="(name,index) in tabTittle" :class ='{on:index===tabActive}' @click='tabCheck(index)'>{{name}}</li>
     </ul>
+
     <!--<ul class="popup-body">-->
       <!--<li v-bind:class="{showElement:tabActive === 0}">0</li>-->
       <!--<li v-bind:class="{showElement:tabActive === 1}">1</li>-->
@@ -13,6 +14,7 @@
       <!--<li :class="{showElement:tabActive === 4}">4</li>-->
       <!--<li :class="{showElement:tabActive === 5}">5</li>-->
     <!--</ul>-->
+
     </div>
   </div>
 </template>

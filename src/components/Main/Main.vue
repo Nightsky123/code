@@ -1,11 +1,10 @@
 <template>
   <div class="Main">
-    <!--<select  id="cnOrEn" @change="selectVal">-->
-      <!--<option>{{allWord.options[0].text}}</option>-->
-      <!--<option>{{allWord.options[1].text}}</option>-->
-    <!--</select>-->
-
-    <div id = 'headnav' class="bg">
+    <div id = 'headnav' v-show="headShow" class="bg">
+      <div class="list">
+        <input type="text" name="title" v-model:value="password" placeholder="请输入密码">
+        <button type="button" @click="check(password)">确定</button>
+      </div>
       <div class="bg-wall">
         <ul>
           <li><span>其实，我来自火星</span></li>
@@ -23,15 +22,14 @@
         </ul>
       </div>
     </div>
-
     <router-view></router-view>
-    <div class="tabClass">
+    <div class="tabClass" v-show="tabShow">
     <ul class="tab">
-      <li><router-link to="/aboutMe"  @click.native="changeColor($event)">{{allWord.showTheWord.tab1}}</router-link></li>
-      <li><router-link to="/myTrial"   @click.native="changeColor($event)">{{allWord.showTheWord.tab2}}</router-link></li>
+      <li><router-link to="/aboutMe"  @click.native="changeColor()">{{allWord.showTheWord.tab1}}</router-link></li>
+      <li><router-link to="/myTrial"   @click.native="changeColor()">{{allWord.showTheWord.tab2}}</router-link></li>
       <!--<li><router-link to="/second"  @click.native="changeColor($event)">{{allWord.showTheWord.tab3}}</router-link></li>-->
-      <li><router-link to="/leaveMessage"   @click.native="changeColor($event)">{{allWord.showTheWord.tab4}}</router-link></li>
-      <li><router-link to="/starFlow"   @click.native="changeColor($event)">{{allWord.showTheWord.tab5}}</router-link></li>
+      <li><router-link to="/leaveMessage"   @click.native="changeColor()">{{allWord.showTheWord.tab4}}</router-link></li>
+      <li><router-link to="/starFlow"   @click.native="changeColor()">{{allWord.showTheWord.tab5}}</router-link></li>
     </ul>
     </div>
   </div>
@@ -44,6 +42,8 @@
   import second from '../child/second'
   import Hello from '../child/leaveMessage'
   import myTrial from '../child/myTrial'
+
+  import {mapState,mapMutations} from 'vuex'
   export default {
     name: 'Main',
     components:{
@@ -54,21 +54,48 @@
         allWord:global.allWord,
         msg: 'Welcome to Your Vue.js App',
         show: true,
+        headShow:true,
+        password: '', //密码
+        loginOrNot:'',
+        tabShow:false
 
       }
     },
-
+    computed: {
+      ...mapState([
+        'login'
+      ])
+    },
     methods:{
+      ...mapMutations([
+        'checkPassword'
+      ]),
+      check(password) {
+        this.checkPassword({
+          password:password
+        });
+        //状态是true则可登陆
+        if(this.$store.state.login){
+          this.loginOrNot = true;
+          //隐藏登录页
+          this.headShow = false;
+          //登陆后显示tab导航
+          this.tabShow = true;
+          //页面至我的页面
+          this.$router.replace('/aboutMe')
+        }else{
+          this.loginOrNot = false;
+          this.headShow = true;
+        }
+      },
       selectVal: function(ele) {
         /*中英文切换*/
         this.allWord.selected = ele.target.selectedOptions[0].value;
         this.allWord.selected === '简体中文'?this.allWord.showTheWord = this.allWord.Cn:this.allWord.showTheWord = this.allWord.En;
       },
-      changeColor:function(event){
-        let s = document.getElementById('headnav');
-        s.style.display = 'none';
-        event.target.href.indexOf('map')>0? document.getElementById('cnOrEn').style.display = 'none':'';
-
+      //隐藏首页
+      changeColor:function(){
+          this.headShow = false;
       }
     }
   }
@@ -83,7 +110,29 @@
     height: 100%;
     overflow: auto;
   }
+   .list{
+     margin: 0 auto;
+     width: 100%;
+     position: absolute;
+     top:calc(100vh - 30px);
 
+     input{
+       width: 350px;
+       height: 35px;
+       border-radius: 5px;
+       border: 0;
+       outline: none;
+     }
+     button{
+       width: 50px;
+       height: 35px;
+       border-radius: 5px;
+       border: 0;
+       background: #fff;
+       margin: -13px;
+       line-height: 35px;
+     }
+   }
   .bg {
     height: 100vh;
     overflow: hidden;

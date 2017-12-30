@@ -55,6 +55,7 @@
         ]
       }
     },
+
     methods:{
       firstPageArticle:function(arg){
         let self = this;
