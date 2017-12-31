@@ -52,7 +52,7 @@
 
   import global from './global'
   export default {
-    name: 'hello',
+    name: 'contactMe',
     data () {
       return {
         //弹窗

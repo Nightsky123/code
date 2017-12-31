@@ -11,7 +11,7 @@ import myTrial from '@/components/child/myTrial'
 
 import Main from '@/components/Main/Main'
 import global from '@/components/Main/global'
-import starFlow from '@/components/Main/contactMe'
+import contactMe from '@/components/Main/contactMe'
 
 import keyboard from '@/components/sixArticle/keyboard'
 import guitar from '@/components/sixArticle/guitar'
@@ -45,7 +45,7 @@ export default new Router({
         {  path: '/second', component: second},
         {  path: '/leaveMessage', component: leaveMessage},
         {  path: '/myTrial', component: myTrial},
-        {  path: '/starFlow', component: starFlow},
+        {  path: '/contactMe', component: contactMe},
 
         //那些文章
         {  path: '/keyboard', component: keyboard},

@@ -2,7 +2,7 @@
   <div class="Main">
     <div id = 'headnav' v-show="headShow" class="bg">
       <div class="list">
-        <input type="text" name="title" v-model:value="password" placeholder="请输入密码">
+        <input type="text" name="title" v-model:value="password" v-on:keyup.enter='check(password)' placeholder="请输入密码">
         <button type="button" @click="check(password)">确定</button>
       </div>
       <div class="bg-wall">
@@ -25,11 +25,12 @@
     <router-view></router-view>
     <div class="tabClass" v-show="tabShow">
     <ul class="tab">
-      <li><router-link to="/aboutMe"  @click.native="changeColor()">{{allWord.showTheWord.tab1}}</router-link></li>
-      <li><router-link to="/myTrial"   @click.native="changeColor()">{{allWord.showTheWord.tab2}}</router-link></li>
+      <li><router-link to="/aboutMe"  @click.native="changeColor($event)">{{allWord.showTheWord.tab1}}</router-link></li>
+      <li><router-link to="/myTrial"   @click.native="changeColor($event)">{{allWord.showTheWord.tab2}}</router-link></li>
       <!--<li><router-link to="/second"  @click.native="changeColor($event)">{{allWord.showTheWord.tab3}}</router-link></li>-->
-      <li><router-link to="/leaveMessage"   @click.native="changeColor()">{{allWord.showTheWord.tab4}}</router-link></li>
-      <li><router-link to="/starFlow"   @click.native="changeColor()">{{allWord.showTheWord.tab5}}</router-link></li>
+      <li><router-link to="/leaveMessage"   @click.native="changeColor($event)">{{allWord.showTheWord.tab4}}</router-link></li>
+      <li><router-link to="/contactMe"   @click.native="changeColor($event)">{{allWord.showTheWord.tab5}}</router-link></li>
+      <li><router-link to="/" @click.native="changeColor($event)">{{allWord.showTheWord.tab6}}</router-link></li>
     </ul>
     </div>
   </div>
@@ -37,7 +38,7 @@
 
 <script>
   import global from '../Main/global'
-  import starFlow from './contactMe'
+  import contactMe from './contactMe'
   import aboutMe from '../child/aboutMe'
   import second from '../child/second'
   import Hello from '../child/leaveMessage'
@@ -47,7 +48,7 @@
   export default {
     name: 'Main',
     components:{
-      starFlow
+//      starFlow
     },
     data:()=> {
       return {
@@ -94,8 +95,14 @@
         this.allWord.selected === '简体中文'?this.allWord.showTheWord = this.allWord.Cn:this.allWord.showTheWord = this.allWord.En;
       },
       //隐藏首页
-      changeColor:function(){
-          this.headShow = false;
+      changeColor:function($event){
+          if($event.target.text ==='锁屏'){
+            this.headShow = true;
+            this.tabShow = false;
+            this.password = '';
+          }else{
+            this.headShow = false;
+          }
       }
     }
   }
