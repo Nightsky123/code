@@ -1,6 +1,6 @@
 <template>
   <!--地图容器-->
-  <div id="mapPage" class="mapPage"></div>
+  <div id="mapPage" class="mapPage" v-show="show"></div>
 </template>
 <script>
 
@@ -15,9 +15,17 @@ import * as BMapExtension from 'echarts/extension/BMap/src/main'
     name:'myTrial',
     data () {
       return {
+        show: true,
       }
     },
     mounted() {
+      if(!this.$store.state.login){
+        this.show = false;
+        this.$router.replace('/')
+        return false;
+      }else{
+        this.show = true;
+      }
       // 初始化地图
       let BMapExt = new BMapExtension(document.getElementById('mapPage'),BMap,echarts);
       let map = BMapExt.getMap();

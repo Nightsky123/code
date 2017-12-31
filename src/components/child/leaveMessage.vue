@@ -1,5 +1,5 @@
 <template>
-  <div class="readAllTheMessage">
+  <div class="readAllTheMessage" v-show="show">
     <div class="nav">
       <ul class="timeline">
         <li v-model='allList' v-for="listData in allList">
@@ -22,13 +22,20 @@ export default {
   name: 'leaveMessage',
   data () {
     return {
+      show: true,
       msg: 'Welcome to Your Vue.js App',
       whichText:'',
       allList: ''
     }
   },
   mounted(){
-    this.readAllTheMessage();
+    if(!this.$store.state.login){
+      this.show = false;
+      this.$router.replace('/')
+    }else{
+      this.show = true;
+      this.readAllTheMessage();
+    }
   },
   methods:{
       readAllTheMessage:function(){

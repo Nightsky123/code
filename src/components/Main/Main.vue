@@ -27,7 +27,6 @@
     <ul class="tab">
       <li><router-link to="/aboutMe"  @click.native="changeColor($event)">{{allWord.showTheWord.tab1}}</router-link></li>
       <li><router-link to="/myTrial"   @click.native="changeColor($event)">{{allWord.showTheWord.tab2}}</router-link></li>
-      <!--<li><router-link to="/second"  @click.native="changeColor($event)">{{allWord.showTheWord.tab3}}</router-link></li>-->
       <li><router-link to="/leaveMessage"   @click.native="changeColor($event)">{{allWord.showTheWord.tab4}}</router-link></li>
       <li><router-link to="/contactMe"   @click.native="changeColor($event)">{{allWord.showTheWord.tab5}}</router-link></li>
       <li><router-link to="/" @click.native="changeColor($event)">{{allWord.showTheWord.tab6}}</router-link></li>

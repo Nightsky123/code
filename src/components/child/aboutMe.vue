@@ -1,5 +1,5 @@
 <template>
-  <div class="first">
+  <div class="first" v-show="show">
     <div class="firstImg">
       <div class="firstImgChild">
         <ul>
@@ -20,9 +20,7 @@
         </a>
       </div>
       </div>
-
     </div>
-
   </div>
 </template>
 
@@ -39,23 +37,31 @@
     name: 'aboutMe',
     data () {
       return{
-        allWord:global.allWord,
-        headPic :[
-          {src:'static/img/lufei-3.jpeg'},
-          {src:'static/img/lufei-2.jpg'},
-          {src:'static/img/lufei-1.jpg'}
-        ],
-        picList: [
-          {src:'static/img/keyboard.jpg',des:'我是键盘侠,键盘',index:'/keyboard'},
-          {src:'static/img/guitar.jpg',des:'我的吉他,吉他',index:'/guitar'},
-          {src:'static/img/sightseeing.jpg',des:'那些山山水水,旅行',index:'/sightseeing'},
-          {src:'static/img/music.jpg',des:'我的音乐',index:'/music'},
-          {src:'static/img/freephoto.jpg',des:'随手拍',index:'/freephoto'},
-          {src:'static/img/me.jpg',des:'我',index:'/me'},
-        ]
+          show:true,
+          allWord:global.allWord,
+          headPic :[
+            {src:'static/img/lufei-3.jpeg'},
+            {src:'static/img/lufei-2.jpg'},
+            {src:'static/img/lufei-1.jpg'}
+          ],
+          picList: [
+            {src:'static/img/keyboard.jpg',des:'我是键盘侠,键盘',index:'/keyboard'},
+            {src:'static/img/guitar.jpg',des:'我的吉他,吉他',index:'/guitar'},
+            {src:'static/img/sightseeing.jpg',des:'那些山山水水,旅行',index:'/sightseeing'},
+            {src:'static/img/music.jpg',des:'我的音乐',index:'/music'},
+            {src:'static/img/freephoto.jpg',des:'随手拍',index:'/freephoto'},
+            {src:'static/img/me.jpg',des:'我',index:'/me'},
+          ]
       }
     },
-
+    mounted(){
+      if(!this.$store.state.login){
+          this.show = false;
+          this.$router.replace('/')
+      }else{
+        this.show = true;
+      }
+    },
     methods:{
       firstPageArticle:function(arg){
         let self = this;

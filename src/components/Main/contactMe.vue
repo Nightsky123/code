@@ -55,6 +55,7 @@
     name: 'contactMe',
     data () {
       return {
+        show:true,
         //弹窗
         showNotification: false,
         options: {},
@@ -112,6 +113,13 @@
     },
     components: {tips},
     mounted(){
+      if(!this.$store.state.login){
+        this.show = false;
+        this.$router.replace('/');
+        return false;
+      }else{
+        this.show = true;
+      }
       let self = this;
       //用的jq的ajax请求，接口是后台提供的
       $.ajax({
