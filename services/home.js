@@ -53,52 +53,33 @@ var homePageJs = function () {
         var c = document.getElementById("myCanvas");
         var cxt = c.getContext("2d");
         cxt.lineWidth = 6;//线条的宽度
-        cxt.strokeStyle = "white";//线条的颜色
+        cxt.strokeStyle = "#333";//线条的颜色
         cxt.beginPath();
-        cxt.moveTo(1100.5, 4.5);//括号内左边是x轴值，右边是y轴
-        cxt.lineTo(4.5, 1100.5);
-        cxt.closePath();
-        cxt.stroke();
-
-        cxt.beginPath();
-        cxt.moveTo(1100.5, 4.5);
-        cxt.lineTo(350.5, 1150.5);
-        cxt.stroke();
-
-        cxt.beginPath();
-        cxt.moveTo(4.5, 1100.5);
-        cxt.lineTo(350.5, 1150.5);
-        cxt.closePath();
-        cxt.stroke();
-
-        cxt.beginPath();
-        cxt.moveTo(350.5, 1150.5);
-        cxt.lineTo(350.5, 1300.5);
-        cxt.lineTo(434.5, 1175.5);
-        cxt.stroke();
-
-        cxt.beginPath();
-        cxt.moveTo(350.5, 1300.5);
-        cxt.lineTo(400.5, 1160.5);  //飞机尾
-        cxt.lineTo(1100.5, 4.5);  //飞机头
-        cxt.stroke();
-
-        cxt.beginPath();
-        cxt.moveTo(1100.5, 4.5);
-        cxt.lineTo(750.5, 1300.5);
-        cxt.lineTo(400.5, 1160.5);
+        cxt.moveTo(1100, 4);//括号内左边是x轴值，右边是y轴
+        cxt.lineTo(4, 1100);
+        cxt.lineTo(1100, 4);
+        cxt.lineTo(350, 1150);
+        cxt.lineTo(4, 1100);
+        cxt.lineTo(350, 1150);
+        cxt.lineTo(350, 1300);
+        cxt.lineTo(434, 1175);
+        cxt.lineTo(350, 1300);
+        cxt.lineTo(400, 1160);  //飞机尾
+        cxt.lineTo(1100, 4);  //飞机头
+        cxt.lineTo(750, 1300);
+        cxt.lineTo(400, 1160);
         cxt.stroke();
 
         cxt.beginPath();
         cxt.globalAlpha = 0.4;
         cxt.lineWidth = 3;//线条的宽度
-        cxt.moveTo(500, 1254.5);
+        cxt.moveTo(500, 1254);
         cxt.lineTo(300.5, 1600.5);
         cxt.stroke();
         cxt.beginPath();
         cxt.globalAlpha = 0.3;
         cxt.moveTo(200, 1190.5);
-        cxt.lineTo(100.5, 1300.5);
+        cxt.lineTo(100.5, 1300);
         cxt.stroke();
 
     };
